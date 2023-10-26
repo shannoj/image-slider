@@ -1,0 +1,63 @@
+#body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#photo-container{
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: black;
+    background-color: lightgray;
+}
+
+#button-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+}
+
+.slider-button{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    z-index: 2;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    width: 100%;
+}
+
+#dot-container{
+    width: 30%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.dot{
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: white;
+}
