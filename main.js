@@ -4,6 +4,9 @@ photoContainer = document.getElementById('photo-container');
 dot1 = document.getElementById('dot-1');
 dot2 = document.getElementById('dot-2');
 dot3 = document.getElementById('dot-3');
+img1 = document.getElementById('img-1');
+img2 = document.getElementById('img-2');
+img3 = document.getElementById('img-3');
 
 function mod(n, m) {
     return ((n % m) + m) % m;
@@ -14,6 +17,9 @@ let positionCounter = mod(x, 4);
 dot1.style.backgroundColor = 'white';
 dot2.style.backgroundColor = 'grey';
 dot3.style.backgroundColor = 'grey';
+img1.style.display = 'flex';
+img2.style.display = 'none';
+img3.style.display = 'none';
 
 rightButton.addEventListener('click', function(){
     x += 1;
@@ -27,14 +33,23 @@ rightButton.addEventListener('click', function(){
         dot1.style.backgroundColor = 'white';
         dot2.style.backgroundColor = 'grey';
         dot3.style.backgroundColor = 'grey';
+        img1.style.display = 'flex';
+        img2.style.display = 'none';
+        img3.style.display = 'none';
     } else if (positionCounter == 2){
         dot1.style.backgroundColor = 'grey';
         dot2.style.backgroundColor = 'white';
         dot3.style.backgroundColor = 'grey';
+        img1.style.display = 'none';
+        img2.style.display = 'flex';
+        img3.style.display = 'none';
     } else if (positionCounter == 3){
         dot1.style.backgroundColor = 'grey';
         dot2.style.backgroundColor = 'grey';
         dot3.style.backgroundColor = 'white';
+        img1.style.display = 'none';
+        img2.style.display = 'none';
+        img3.style.display = 'flex';
     }
 })
 
@@ -50,13 +65,22 @@ leftButton.addEventListener('click', function(){
         dot1.style.backgroundColor = 'white';
         dot2.style.backgroundColor = 'grey';
         dot3.style.backgroundColor = 'grey';
+        img1.style.display = 'flex';
+        img2.style.display = 'none';
+        img3.style.display = 'none';
     } else if (positionCounter == 2){
         dot1.style.backgroundColor = 'grey';
         dot2.style.backgroundColor = 'white';
         dot3.style.backgroundColor = 'grey';
+        img1.style.display = 'none';
+        img2.style.display = 'flex';
+        img3.style.display = 'none';
     } else if (positionCounter == 3){
         dot1.style.backgroundColor = 'grey';
         dot2.style.backgroundColor = 'grey';
         dot3.style.backgroundColor = 'white';
+        img1.style.display = 'none';
+        img2.style.display = 'none';
+        img3.style.display = 'flex';
     }
 })
