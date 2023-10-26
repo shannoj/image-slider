@@ -59,5 +59,16 @@
     height: 6px;
     width: 6px;
     border-radius: 50%;
-    background-color: white;
+}
+
+#dot-1{
+    background-color: grey;
+}
+
+#dot-2{
+    background-color: grey;
+}
+
+#dot-3{
+    background-color: grey;
 }
