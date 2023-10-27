@@ -16,6 +16,7 @@
     border-color: black;
     background-color: lightgray;
     position: relative;
+    transition: opacity 0.5s ease-in-out;
 }
 
 #button-container{
@@ -79,18 +80,24 @@
     display: none;
     height: 100%;
     width: 100%;
+    transition: opacity 1s ease-in-out; /* Apply a smooth opacity transition */
+    opacity: 0; /* Start with the images hidden */
 }
 
 #img-2{
     display: none;
     height: 100%;
-    width: 100%
+    width: 100%;
+    transition: opacity 1s ease-in-out; /* Apply a smooth opacity transition */
+    opacity: 0; /* Start with the images hidden */
 }
 
 #img-3{
     display: none;
     height: 100%;
-    width: 100%
+    width: 100%;
+    transition: opacity 1s ease-in-out; /* Apply a smooth opacity transition */
+    opacity: 0; /* Start with the images hidden */
 }
 
 #tool-container{

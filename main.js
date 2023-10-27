@@ -10,6 +10,11 @@ img3 = document.getElementById('img-3');
 
 // Function to update the image slider styling
 function updateImageSlider() {
+    // Fade out all images
+    img1.style.opacity = 0;
+    img2.style.opacity = 0;
+    img3.style.opacity = 0;
+
     if (positionCounter == 1) {
         dot1.style.backgroundColor = 'white';
         dot2.style.backgroundColor = 'grey';
@@ -17,6 +22,9 @@ function updateImageSlider() {
         img1.style.display = 'flex';
         img2.style.display = 'none';
         img3.style.display = 'none';
+        img1.style.opacity = 1;
+        img2.style.opacity = 0;
+        img3.style.opacity = 0;
     } else if (positionCounter == 2) {
         dot1.style.backgroundColor = 'grey';
         dot2.style.backgroundColor = 'white';
@@ -24,6 +32,9 @@ function updateImageSlider() {
         img1.style.display = 'none';
         img2.style.display = 'flex';
         img3.style.display = 'none';
+        img2.style.opacity = 1;
+        img1.style.opacity = 0;
+        img3.style.opacity = 0;
     } else if (positionCounter == 3) {
         dot1.style.backgroundColor = 'grey';
         dot2.style.backgroundColor = 'grey';
@@ -31,6 +42,9 @@ function updateImageSlider() {
         img1.style.display = 'none';
         img2.style.display = 'none';
         img3.style.display = 'flex';
+        img3.style.opacity = 1;
+        img2.style.opacity = 0;
+        img1.style.opacity = 0;
     }
 }
 
@@ -71,6 +85,9 @@ dot3.style.backgroundColor = 'grey';
 img1.style.display = 'flex';
 img2.style.display = 'none';
 img3.style.display = 'none';
+img1.style.opacity = 1;
+img2.style.opacity = 0;
+img3.style.opacity = 0;
 
 rightButton.addEventListener('click', function(){
     stopAutoSlide();
@@ -88,6 +105,9 @@ rightButton.addEventListener('click', function(){
         img1.style.display = 'flex';
         img2.style.display = 'none';
         img3.style.display = 'none';
+        img1.style.opacity = 1;
+        img2.style.opacity = 0;
+        img3.style.opacity = 0;
     } else if (positionCounter == 2){
         dot1.style.backgroundColor = 'grey';
         dot2.style.backgroundColor = 'white';
@@ -95,6 +115,9 @@ rightButton.addEventListener('click', function(){
         img1.style.display = 'none';
         img2.style.display = 'flex';
         img3.style.display = 'none';
+        img1.style.opacity = 0;
+        img2.style.opacity = 1;
+        img3.style.opacity = 1;
     } else if (positionCounter == 3){
         dot1.style.backgroundColor = 'grey';
         dot2.style.backgroundColor = 'grey';
@@ -102,6 +125,9 @@ rightButton.addEventListener('click', function(){
         img1.style.display = 'none';
         img2.style.display = 'none';
         img3.style.display = 'flex';
+        img1.style.opacity = 0;
+        img2.style.opacity = 0;
+        img3.style.opacity = 1;
     }
     startAutoSlide();
 })
@@ -122,6 +148,9 @@ leftButton.addEventListener('click', function(){
         img1.style.display = 'flex';
         img2.style.display = 'none';
         img3.style.display = 'none';
+        img1.style.opacity = 1;
+        img2.style.opacity = 0;
+        img3.style.opacity = 0;
     } else if (positionCounter == 2){
         dot1.style.backgroundColor = 'grey';
         dot2.style.backgroundColor = 'white';
@@ -129,6 +158,9 @@ leftButton.addEventListener('click', function(){
         img1.style.display = 'none';
         img2.style.display = 'flex';
         img3.style.display = 'none';
+        img1.style.opacity = 0;
+        img2.style.opacity = 1;
+        img3.style.opacity = 0;
     } else if (positionCounter == 3){
         dot1.style.backgroundColor = 'grey';
         dot2.style.backgroundColor = 'grey';
@@ -136,6 +168,9 @@ leftButton.addEventListener('click', function(){
         img1.style.display = 'none';
         img2.style.display = 'none';
         img3.style.display = 'flex';
+        img1.style.opacity = 0;
+        img2.style.opacity = 0;
+        img3.style.opacity = 1;
     }
     startAutoSlide();
 })
