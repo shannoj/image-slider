@@ -8,6 +8,57 @@ img1 = document.getElementById('img-1');
 img2 = document.getElementById('img-2');
 img3 = document.getElementById('img-3');
 
+// Function to update the image slider styling
+function updateImageSlider() {
+    if (positionCounter == 1) {
+        dot1.style.backgroundColor = 'white';
+        dot2.style.backgroundColor = 'grey';
+        dot3.style.backgroundColor = 'grey';
+        img1.style.display = 'flex';
+        img2.style.display = 'none';
+        img3.style.display = 'none';
+    } else if (positionCounter == 2) {
+        dot1.style.backgroundColor = 'grey';
+        dot2.style.backgroundColor = 'white';
+        dot3.style.backgroundColor = 'grey';
+        img1.style.display = 'none';
+        img2.style.display = 'flex';
+        img3.style.display = 'none';
+    } else if (positionCounter == 3) {
+        dot1.style.backgroundColor = 'grey';
+        dot2.style.backgroundColor = 'grey';
+        dot3.style.backgroundColor = 'white';
+        img1.style.display = 'none';
+        img2.style.display = 'none';
+        img3.style.display = 'flex';
+    }
+}
+
+// Function to move to the next image
+function moveToNextImage() {
+    x += 1;
+    positionCounter = mod(x, 4);
+
+    if (positionCounter == 0) {
+        x += 1;
+        positionCounter = mod(x, 4);
+    }
+
+    // Update the styling
+    updateImageSlider();
+}
+
+// Function to start the auto slide
+function startAutoSlide() {
+    autoSlideInterval = setInterval(moveToNextImage, 5000); // 5000 milliseconds (5 seconds)
+}
+
+// Function to stop the auto slide
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
+
 function mod(n, m) {
     return ((n % m) + m) % m;
   }
@@ -22,6 +73,7 @@ img2.style.display = 'none';
 img3.style.display = 'none';
 
 rightButton.addEventListener('click', function(){
+    stopAutoSlide();
     x += 1;
     positionCounter = mod(x, 4);
     if (positionCounter == 0){
@@ -51,9 +103,11 @@ rightButton.addEventListener('click', function(){
         img2.style.display = 'none';
         img3.style.display = 'flex';
     }
+    startAutoSlide();
 })
 
 leftButton.addEventListener('click', function(){
+    stopAutoSlide();
     x -= 1;
     positionCounter = mod(x, 4);
     if (positionCounter == 0){
@@ -83,4 +137,7 @@ leftButton.addEventListener('click', function(){
         img2.style.display = 'none';
         img3.style.display = 'flex';
     }
+    startAutoSlide();
 })
+
+startAutoSlide();
